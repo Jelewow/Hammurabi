@@ -3,7 +3,7 @@
 void GameFramework::StartGame()
 {
     stats = {kStartPopulation, kStartWheat, kStartAcres};
-    bool is_continue;
+    bool is_continue = false;
     if(saver.IsFileExist())
     {
         char input;
@@ -41,20 +41,21 @@ void GameFramework::GameOver()
 
 void GameFramework::GameLoop(bool isContinueGame)
 {
+    int current_round = 0;
     if(isContinueGame)
     {
         ShowRoundInfo(roundInfo);
+        current_round = roundInfo.current_round;
     }
 
     bool exit = false;
-    int current_round = roundInfo.current_round;
 
     ValidateInfo validateInfo;
     InputInfo inputInfo{};
 
     int was_population;
 
-    while (!exit && current_round <= kMaxRounds)
+    while (!exit && current_round < kMaxRounds)
     {
         //валидация значений
         validateInfo.cost_per_acr = GetRandomValue(kMinCostPerAcr, kMaxCostPerAcr);
@@ -109,7 +110,7 @@ void GameFramework::GameLoop(bool isContinueGame)
         bool was_plague = plague_chance <= 15;
         if (was_plague)
         {
-            stats.population /= 2;
+            stats.population = floor(stats.population / 2.0);
         }
 
         //процент умерших за раунд
@@ -135,7 +136,7 @@ void GameFramework::GameLoop(bool isContinueGame)
             saver.Save(roundInfo);
         }
     }
-    if(current_round == 10)
+    if(current_round == kMaxRounds)
         WinGame();
 }
 
@@ -200,7 +201,7 @@ void GameFramework::ShowRoundInfo(RoundInfo &roundInfo)
 
 void GameFramework::WinGame()
 {
-    double sum;
+    double sum = 0;
     for (double percent : dead_percentage)
     {
         sum += percent;
@@ -237,6 +238,7 @@ void GameFramework::Retry()
     std::cin >> input;
     if (input == 'y')
     {
+        dead_percentage.clear();
         StartGame();
     }
 }

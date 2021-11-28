@@ -15,7 +15,7 @@ private:
     const int kMaxWheatPerAcr = 6;
     const int kMinWheatPerAcr = 1;
     const int kStartPopulation = 100;
-    const int kStartAcres = 100;
+    const int kStartAcres = 1000;
     const double kStartWheat = 2800;
 
     std::vector<double> dead_percentage;
