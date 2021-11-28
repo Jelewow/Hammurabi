@@ -76,8 +76,6 @@ void GameFramework::GameLoop(bool isContinueGame)
         //собрали пшена
         int wheat_per_acre = GetRandomValue(kMinWheatPerAcr, kMaxWheatPerAcr);
         int picked_wheat = inputInfo.sown_acres * wheat_per_acre;
-        if (picked_wheat > validateInfo.max_acres_can_process)
-            picked_wheat = validateInfo.max_acres_can_process;
         stats.wheat += picked_wheat;
 
 
