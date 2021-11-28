@@ -1,0 +1,2 @@
+#pragma code_page(65001)
+1 /* CREATEPROCESS_MANIFEST_RESOURCE_ID */ 24 /* RT_MANIFEST */ "C:/Users/Public/C++ Projects/Hammurabi_v2/cmake-build-debug/CMakeFiles/Hammurabi_v2.dir/embed.manifest"

@@ -1,0 +1,80 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/Core.h
+iostream
+-
+string
+-
+random
+-
+InputInfo.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/InputInfo.h
+../Headers/PlayerStats.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/PlayerStats.h
+ValidateInfo.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/ValidateInfo.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/GameFramework.h
+iostream
+-
+algorithm
+-
+PlayerStats.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/PlayerStats.h
+Core.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/Core.h
+RoundInfo.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/RoundInfo.h
+Saver.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/Saver.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/InputInfo.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/PlayerStats.h
+fstream
+-
+iostream
+-
+../Headers/PlayerStats.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/PlayerStats.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/RoundInfo.h
+fstream
+-
+iostream
+-
+PlayerStats.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/PlayerStats.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/Saver.h
+fstream
+-
+filesystem
+-
+../Headers/PlayerStats.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/PlayerStats.h
+RoundInfo.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/RoundInfo.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/ValidateInfo.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Sources/Core.cpp
+../Headers/Core.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/Core.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Sources/GameFramework.cpp
+../Headers/GameFramework.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/GameFramework.h
+
+C:/Users/Public/C++ Projects/Hammurabi_v2/main.cpp
+iostream
+-
+Core/Headers/GameFramework.h
+C:/Users/Public/C++ Projects/Hammurabi_v2/Core/Headers/GameFramework.h
+
